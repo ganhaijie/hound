@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hound-common" />
+        <module name="hound-dao" />
+        <module name="hound-entity" />
+        <module name="hound-service" />
+        <module name="hound-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hound-common" target="1.6" />
+      <module name="hound-dao" target="1.6" />
+      <module name="hound-entity" target="1.6" />
+      <module name="hound-parent" target="1.6" />
+      <module name="hound-service" target="1.6" />
+      <module name="hound-web" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

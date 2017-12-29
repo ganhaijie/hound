@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+    <!--mybatis-->
+	<mapper namespace="com.ghj.hound.mapper.DemoMapper">
+		 <resultMap id="BaseResultMap" type="com.ghj.hound.entity.demo.Demo">
+		    <result column="id" jdbcType="INTEGER" property="id" />
+		    <result column="name" jdbcType="VARCHAR" property="name" />
+		  </resultMap>
+	    
+	     <select id='getNameDemo' resultMap='BaseResultMap'>
+	      select id,name
+	      from 
+	      demo
+	     </select>
+	</mapper>
+
