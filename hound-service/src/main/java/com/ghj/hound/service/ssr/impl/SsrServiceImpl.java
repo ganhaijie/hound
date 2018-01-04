@@ -27,5 +27,5 @@ public class SsrServiceImpl implements SsrService {
     public ReturnModel<String> updateSsr() {
         return null;
     }
-    
+
 }
