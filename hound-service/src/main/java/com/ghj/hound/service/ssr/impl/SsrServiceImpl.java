@@ -14,7 +14,6 @@ public class SsrServiceImpl implements SsrService {
     @Override
     public  ReturnModel<SSR>  getSsr() {
         String context = JSONUtil.ReadFile("D:\\ghj\\config.json");
-        System.out.println(context);
 
         SSR ssr=JSONObject.parseObject(context, SSR.class);
 
