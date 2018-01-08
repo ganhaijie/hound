@@ -1,4 +1,4 @@
-package com.ghj.hound.api.config;
+package com.ghj.hound.config;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.github.pagehelper.PageHelper;

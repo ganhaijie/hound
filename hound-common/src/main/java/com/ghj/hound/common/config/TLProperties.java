@@ -17,6 +17,9 @@ public class TLProperties {
     public static String TL_APIKEY;
 
     static {
+
+    }
+   /* static {
         FileInputStream in = null;
         try {
             File file = ResourceUtils.getFile("classpath:file.properties");
@@ -36,5 +39,5 @@ public class TLProperties {
                 e.printStackTrace();
             }
         }
-    }
+    }*/
 }

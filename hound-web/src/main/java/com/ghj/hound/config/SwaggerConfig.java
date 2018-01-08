@@ -1,4 +1,4 @@
-package com.ghj.hound.api.config;
+package com.ghj.hound.config;
 
 
 import org.springframework.context.annotation.Bean;
