@@ -1,4 +1,4 @@
-package com.ghj.hound;
+package com.ghj.hound.api;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
