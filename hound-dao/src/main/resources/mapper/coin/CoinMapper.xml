@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--mybatis-->
+<mapper namespace="com.ghj.hound.mapper.coin.CoinMapper">
+    <resultMap id="BaseResultMap" type="com.ghj.hound.entity.coin.Coin">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="bhourse" jdbcType="VARCHAR" property="bhourse" />
+        <result column="currency" jdbcType="VARCHAR" property="currency" />
+        <result column="price" jdbcType="DECIMAL" property="price" />
+        <result column="date" jdbcType="TIMESTAMP" property="date" />
+    </resultMap>
+
+    <select id='getCoins' resultMap='BaseResultMap'>
+        select *
+        from
+        demo where 1=1
+    </select>
+
+
+    <insert id="insertCoin">
+
+
+    </insert>
+</mapper>
