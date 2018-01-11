@@ -16,7 +16,7 @@ public class CoinSchedule {
     private static final Logger logger = LogManager.getLogger(CoinSchedule.class);
 
 
-    private static final List<String> markets = new ArrayList<>(){{
+    private static final List<String> markets = new ArrayList<String>(){{
        add("");
     }};
 
