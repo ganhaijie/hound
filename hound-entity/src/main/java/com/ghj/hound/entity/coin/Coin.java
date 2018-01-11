@@ -6,13 +6,13 @@ public class Coin {
 
     private Integer id;
 
-    private String bhourse;
+    private String bourse;
 
     private String currency;
 
     private Double price;
 
-    private Date date;
+    private Date createTime;
 
     public Integer getId() {
         return id;
@@ -22,12 +22,12 @@ public class Coin {
         this.id = id;
     }
 
-    public String getBhourse() {
-        return bhourse;
+    public String getBourse() {
+        return bourse;
     }
 
-    public void setBhourse(String bhourse) {
-        this.bhourse = bhourse;
+    public void setBourse(String bourse) {
+        this.bourse = bourse;
     }
 
     public String getCurrency() {
@@ -46,11 +46,11 @@ public class Coin {
         this.price = price;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

@@ -8,6 +8,6 @@ public interface CoinMapper {
 
     public List<Coin> getCoins();
 
-    public void insertCoin();
+    public void insertCoin(Coin Coin);
 
 }

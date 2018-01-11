@@ -5,22 +5,26 @@
 <!--mybatis-->
 <mapper namespace="com.ghj.hound.mapper.coin.CoinMapper">
     <resultMap id="BaseResultMap" type="com.ghj.hound.entity.coin.Coin">
-        <result column="id" jdbcType="INTEGER" property="id" />
-        <result column="bhourse" jdbcType="VARCHAR" property="bhourse" />
-        <result column="currency" jdbcType="VARCHAR" property="currency" />
-        <result column="price" jdbcType="DECIMAL" property="price" />
-        <result column="date" jdbcType="TIMESTAMP" property="date" />
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="bourse" jdbcType="VARCHAR" property="bourse"/>
+        <result column="currency" jdbcType="VARCHAR" property="currency"/>
+        <result column="price" jdbcType="DECIMAL" property="price"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
     </resultMap>
 
     <select id='getCoins' resultMap='BaseResultMap'>
         select *
         from
-        demo where 1=1
+        coin where 1=1
     </select>
 
 
-    <insert id="insertCoin">
-
-
+    <insert id="insertCoin" parameterType="com.ghj.hound.entity.coin.Coin">
+      INSERT into coin(
+      bhourse,currency,currency,price,create_time
+      )
+      VALUES(
+      #{bhourse},#{currency},#{price},#{createTime}
+      )
     </insert>
 </mapper>
