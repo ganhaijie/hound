@@ -54,7 +54,10 @@ public class CoinDetaiServiceImpl implements CoinDetaiService {
 
             CoinSimple c = new CoinSimple();
             c.setPlatform(CoinSet.ZB);
-            c.setCoinType(currency);
+
+            String[] C=currency.split("_");
+
+            c.setCoinType(C[0].toUpperCase());
             c.setPrice(coinsLast.get(0).getPrice());
 
             Double range =(coinsLast.get(0).getPrice()-coinsBefore.get(0).getPrice())/coinsBefore.get(0).getPrice();
