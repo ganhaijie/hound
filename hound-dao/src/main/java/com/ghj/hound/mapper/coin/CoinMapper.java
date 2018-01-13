@@ -1,6 +1,8 @@
 package com.ghj.hound.mapper.coin;
 
 import com.ghj.hound.entity.coin.Coin;
+import com.sun.tracing.dtrace.ProviderAttributes;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
 import java.util.List;
@@ -11,7 +13,7 @@ public interface CoinMapper {
 
     public void insertCoin(Coin Coin);
 
-/*    public Coin getLast(String currency,Date date);
+    public  List<Coin> getLast(@Param("currency") String currency, @Param("create_time") Date date);
 
-    public Coin getBefore(String currency, Date date);*/
+    public  List<Coin> getBefore(@Param("currency") String currency, @Param("create_time") Date date);
 }

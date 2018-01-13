@@ -27,4 +27,20 @@
       #{bourse},#{currency},#{price},#{createTime}
       )
     </insert>
+
+
+    <select id='getLast' resultMap='BaseResultMap'>
+        select *
+        from
+        coin where currency = #{currency, jdbcType=VARCHAR} and create_time &lt; #{create_time,jdbcType=TIMESTAMP}
+        order by create_time desc LIMIT 1
+    </select>
+
+    <select id='getBefore' resultMap='BaseResultMap'>
+        select *
+        from
+        coin where currency = #{currency, jdbcType=VARCHAR} and create_time &gt; #{create_time,jdbcType=TIMESTAMP}
+        order by create_time LIMIT 1
+    </select>
+
 </mapper>
