@@ -36,7 +36,7 @@ public class SchedledConfiguration {
         trigger.setJobDetail(detailFactoryBean.getObject());
         try {
             //trigger.setCronExpression("0 0 2 1/1 * ? ");//这个时间是每天2点的时候执行一次
-            trigger.setCronExpression("0/10 * * ? * *");//每5秒执行一次
+            trigger.setCronExpression("0 0/10 * * * ?");//每5秒执行一次
         } catch (ParseException e) {
             e.printStackTrace();
         }

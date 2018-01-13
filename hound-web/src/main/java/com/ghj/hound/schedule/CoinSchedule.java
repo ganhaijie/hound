@@ -40,9 +40,8 @@ public class CoinSchedule {
     @Autowired
     private  CoinDetaiService coinDetaiService;
 
-    public void coinPatch() {
+    public  void coinPatch() {
         System.out.println("start");
-
         Date date = new Date();
         for (String market : CoinSet.markets) {
             try {
@@ -55,11 +54,8 @@ public class CoinSchedule {
                 String currency = market;
                 // 请求地址
                 String url = API_DOMAIN + "/data/v1/ticker?market=" + currency;
-                logger.info(currency + "-testTicker url: " + url);
                 // 请求测试
                 String callback = get(url, "UTF-8");
-                logger.info(currency + "-testTicker 结果: " + callback);
-
 
                 TickerResp tickerResp= JSON.parseObject(callback,TickerResp.class);
                 coinDetaiService.insert(currency,date,tickerResp);
