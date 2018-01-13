@@ -21,10 +21,10 @@
 
     <insert id="insertCoin" parameterType="com.ghj.hound.entity.coin.Coin">
       INSERT into coin(
-      bhourse,currency,currency,price,create_time
+      bourse,currency,price,create_time
       )
       VALUES(
-      #{bhourse},#{currency},#{price},#{createTime}
+      #{bourse},#{currency},#{price},#{createTime}
       )
     </insert>
 </mapper>

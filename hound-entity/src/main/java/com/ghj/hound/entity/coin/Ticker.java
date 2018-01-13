@@ -2,59 +2,59 @@ package com.ghj.hound.entity.coin;
 
 public class Ticker {
 
-    private String vol;
-    private String last;
-    private String sell;
-    private String buy;
-    private String high;
-    private String low;
+    private Double vol;
+    private Double last;
+    private Double sell;
+    private Double buy;
+    private Double high;
+    private Double low;
 
 
-    public String getVol() {
+    public Double getVol() {
         return vol;
     }
 
-    public void setVol(String vol) {
+    public void setVol(Double vol) {
         this.vol = vol;
     }
 
-    public String getLast() {
+    public Double getLast() {
         return last;
     }
 
-    public void setLast(String last) {
+    public void setLast(Double last) {
         this.last = last;
     }
 
-    public String getSell() {
+    public Double getSell() {
         return sell;
     }
 
-    public void setSell(String sell) {
+    public void setSell(Double sell) {
         this.sell = sell;
     }
 
-    public String getBuy() {
+    public Double getBuy() {
         return buy;
     }
 
-    public void setBuy(String buy) {
+    public void setBuy(Double buy) {
         this.buy = buy;
     }
 
-    public String getHigh() {
+    public Double getHigh() {
         return high;
     }
 
-    public void setHigh(String high) {
+    public void setHigh(Double high) {
         this.high = high;
     }
 
-    public String getLow() {
+    public Double getLow() {
         return low;
     }
 
-    public void setLow(String low) {
+    public void setLow(Double low) {
         this.low = low;
     }
 }

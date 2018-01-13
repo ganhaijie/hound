@@ -1,4 +1,4 @@
 package com.ghj.hound.entity.coin;
 
-public class tickerReq {
+public class KlineReq {
 }

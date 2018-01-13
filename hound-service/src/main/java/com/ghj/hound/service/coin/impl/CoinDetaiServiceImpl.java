@@ -1,14 +1,17 @@
 package com.ghj.hound.service.coin.impl;
 
 import com.ghj.hound.common.model.ReturnModel;
+import com.ghj.hound.common.set.CoinSet;
 import com.ghj.hound.entity.coin.Coin;
 import com.ghj.hound.entity.coin.CoinSimple;
+import com.ghj.hound.entity.coin.TickerResp;
 import com.ghj.hound.mapper.coin.CoinMapper;
 import com.ghj.hound.service.coin.CoinDetaiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -37,6 +40,23 @@ public class CoinDetaiServiceImpl implements CoinDetaiService {
 
         returnModel.setObj(coinSimples);
 
+        return returnModel;
+    }
+
+    @Override
+    public ReturnModel<String> insert(String currency, Date date,TickerResp tickerResp) {
+        ReturnModel<String> returnModel = new ReturnModel<String>();
+
+        Coin coin = new Coin();
+
+        coin.setBourse(CoinSet.ZB);
+        coin.setCurrency(currency);
+        coin.setCreateTime(date);
+        coin.setPrice(tickerResp.getTicker().getLast());
+
+        coinMapper.insertCoin(coin);
+
+        returnModel.setObj("success");
         return returnModel;
     }
 }

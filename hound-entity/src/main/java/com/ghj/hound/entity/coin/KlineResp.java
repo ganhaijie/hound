@@ -1,6 +1,6 @@
 package com.ghj.hound.entity.coin;
 
-public class klineResp {
+public class KlineResp {
 
     private String[] data;
 
