@@ -41,7 +41,6 @@ public class CoinSchedule {
     private  CoinDetaiService coinDetaiService;
 
     public  void coinPatch() {
-        System.out.println("start");
         Date date = new Date();
         for (String market : CoinSet.markets) {
             try {
@@ -62,7 +61,6 @@ public class CoinSchedule {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-
 
             try {
                 Thread.sleep(5000);
